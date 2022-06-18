@@ -1,6 +1,7 @@
 const billAmount = document.getElementById("bill-amount");
 const amountRecieved = document.getElementById("amount-recieved");
-const quantityOfNotes = document.querySelectorAll(".quantity-of-notes");
+const quantity = document.querySelectorAll(".quantity");
+const value = document.querySelectorAll(".value");
 
 const validateButton = document.getElementById("validate-button");
 const changeButton = document.getElementById("change-button");
@@ -19,7 +20,7 @@ thirdContainer.style.display = "none";
 /*Validation of bill amount*/
 function validateBillAmount() {
     errorMessageFirst.style.display = "none";
-    if (billAmount.value > 0) {
+    if (Number(billAmount.value) > 0) {
         secondContainer.style.display = "block";
         changeButton.addEventListener("click", validateAmountRecieved);
     } else {
@@ -30,9 +31,9 @@ function validateBillAmount() {
 /*Validation of amount recieved*/
 function validateAmountRecieved() {
     errorMessageSecond.style.display = "none";
-    if (amountRecieved.value > billAmount.value) {
+    if (Number(amountRecieved.value) > Number(billAmount.value)) {
         thirdContainer.style.display = "block";
-        const amountToReturn = amountRecieved.value - billAmount.value;
+        const amountToReturn = Number(amountRecieved.value) - Number(billAmount.value);
         changeToBeGiven(amountToReturn);
     } else {
         secondErrorMessage();
@@ -44,7 +45,8 @@ function changeToBeGiven(amountToReturn) {
     for (let i = 0; i < denomination.length; i++) {
         const noOfNotes = Math.trunc(amountToReturn / denomination[i]);
         amountToReturn %= denomination[i];
-        quantityOfNotes[i].innerText = noOfNotes;
+        quantity[i].innerText = noOfNotes;
+        value[i].innerText = denomination[i] * noOfNotes;
     }
     
 }
@@ -64,7 +66,7 @@ function firstErrorMessage() {
 function secondErrorMessage() {
     thirdContainer.style.display = "none";
     errorMessageSecond.style.display = "block";
-    if (amountRecieved.value == billAmount.value) {
+    if (Number(amountRecieved.value) == Number(billAmount.value)) {
         errorMessageSecond.innerText = "No Change to be given.";
     } else if (amountRecieved.value === "") {
         errorMessageSecond.innerText = "Enter the Amount Recieved! smh!";

@@ -1,40 +1,122 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --primary: #343a40;
+    --secondary: #f8f9fa;
+    --tertiary: #202124;
+}
 body {
     font-family: 'Anonymous Pro', monospace;
-}
-input {
-    width: 85%;
-}
-.first-container {
-    margin: auto;
-    background-color: beige;
+    background-color: var(--primary);
+    color: var(--secondary);
     text-align: center;
-    max-width: 500px;
+}
+
+.header {
+    border-radius: 50px 50px 0 0;
+    max-width: 550px;
+    margin: auto;
+    background-color: var(--tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    padding-right: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.header .heading{
+    letter-spacing: -0.15rem;
+    font-size: 50px;
+}
+
+.description {
+    font-style: italic;
+}
+
+input {
+    border: 2px solid var(--secondary);
+    padding-left: 10px;
+    border-radius: 0 10px 10px 0;
+    height: 41px;
+    max-width: 300px;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    padding-top: 14.5px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.first-container {
+    padding: 20px 0;
+    margin: auto;
+    border-radius: 0 0 50px 50px;
+    max-width: 550px;
+    box-shadow: 1px 1px 500px #000000;
+}
+
+.first-container .description {
+    margin-top: 0;
+    padding: 0 30px;
+}
+
+button {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--tertiary);
+    font-family: 'Anonymous Pro', monospace;
+    margin: 10px;
+    padding: 10px;
 }
 
 table {
-    color:black;
-    background-color: blanchedalmond;
+    border: 2px solid var(--secondary);
+    box-shadow: 5px 5px 10px var(--tertiary);
     margin: auto;
     max-width: 80%;
-    border: 1px solid gray;
     border-collapse: collapse;
 }
 
+table caption {
+    font-weight: 700;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px 0px;
+    border-radius: 10px 10px 0 0;
+    color: var(--secondary);
+    background-color: var(--tertiary);
+}
+
+table .row {
+    border-bottom: 0.5px solid var(--secondary);
+}
+
 th {
-    border: 1px solid black;
-    border-collapse: collapse;
+    background-color: var(--tertiary);
+    border-right: 0.5px solid var(--secondary);
     padding: 10px;
     width: 0px;
 }
 
-tr:nth-child(even) {
-    background-color:bisque;
-}
-
 td {
-    border: 1px solid black;
-    border-collapse: collapse;
+    border-left: 0.5px solid var(--secondary);
     padding: 10px;
     width: 0px;
 }
