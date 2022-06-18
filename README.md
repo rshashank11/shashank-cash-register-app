@@ -1,2 +1,2 @@
-# shashank-cash-register-app
- Cash Register App using Javascript.
+# Cash Register App 💵
+**Mark Ten _Cash Register App_ made using Vanilla Javascript, HTML and CSS.**
