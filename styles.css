@@ -1,0 +1,40 @@
+
+body {
+    font-family: 'Anonymous Pro', monospace;
+}
+input {
+    width: 85%;
+}
+.first-container {
+    margin: auto;
+    background-color: beige;
+    text-align: center;
+    max-width: 500px;
+}
+
+table {
+    color:black;
+    background-color: blanchedalmond;
+    margin: auto;
+    max-width: 80%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    width: 0px;
+}
+
+tr:nth-child(even) {
+    background-color:bisque;
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    width: 0px;
+}
