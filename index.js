@@ -46,7 +46,7 @@ function changeToBeGiven(amountToReturn) {
         amountToReturn %= denomination[i];
         quantityOfNotes[i].innerText = noOfNotes;
     }
-
+    
 }
 
 /*Error message during validating bill amount phase*/
@@ -63,15 +63,13 @@ function firstErrorMessage() {
 /*Error message during validating amount recieved phase*/
 function secondErrorMessage() {
     thirdContainer.style.display = "none";
+    errorMessageSecond.style.display = "block";
     if (amountRecieved.value == billAmount.value) {
         errorMessageSecond.innerText = "No Change to be given.";
-        errorMessageSecond.style.display = "block";
     } else if (amountRecieved.value === "") {
         errorMessageSecond.innerText = "Enter the Amount Recieved! smh!";
-        errorMessageSecond.style.display = "block";
     } else {
         errorMessageSecond.innerText = "Ask the customer to wash dishes :)";
-        errorMessageSecond.style.display = "block";
     }
 }
 
