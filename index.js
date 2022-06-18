@@ -2,6 +2,8 @@ const billAmount = document.getElementById("bill-amount");
 const amountRecieved = document.getElementById("amount-recieved");
 const quantityOfNotes = document.querySelectorAll(".quantity-of-notes");
 
+Array.from(quantityOfNotes);
+
 const validateButton = document.getElementById("validate-button");
 const changeButton = document.getElementById("change-button");
 
